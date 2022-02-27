@@ -1,0 +1,39 @@
+.container {
+    padding: 40px 80px;
+    margin: 30px 120px;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+}
+.maps {
+    padding: 20px 40px;
+    margin: 30px 80px;
+    border-radius: 5px;
+}
+.head-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flag-big {
+    height: 100%;
+    width: 50%;
+}
+.flag-big img {
+    height: 20rem;
+    width: 100%;
+}
+.details-info {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+.back-btn {
+    margin-left: 120px;
+    border: none;
+    background: rgb(236, 92, 26);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}

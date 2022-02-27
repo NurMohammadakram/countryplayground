@@ -1,0 +1,8 @@
+.error-msg {
+    text-align: center;
+    margin-top: 20px;
+}
+.error-msg h1{
+    font-size: 8rem;
+    margin-bottom: 0;
+}
