@@ -1,0 +1,65 @@
+@import '../custom';
+@import '../mixins/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.navbar {
+    padding: 5px 40px;
+    @include bgColor;
+}
+
+.searchbar {
+    @include media-breakpoint-down(sm) {
+        display: none
+    }
+}
+.searchbar input {
+    @include paddingForInput;
+    @include media-breakpoint-up(xxl) {
+        width: 450px;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        width: 340px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 320px
+    }
+    @include media-breakpoint-down(md) {
+        width: 300px;
+    }
+   
+    border-radius: 5px 0 0 5px;
+}
+.searchbar button {
+    @include paddingForInput;
+    border-radius: 0 5px 5px 0;
+}
+.lg {
+    color: $white;
+    font-weight: bold;
+    font-family: 'Monoton', cursive;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.3rem;
+    }
+}
+
+
+.nvStyle {
+    color: rgba($white, 0.75);
+    padding: 0 .5rem;
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+.nvStyle:hover {
+    color: rgba($white, 0.9);
+}
+.nvStyle:focus {
+    color: $white;
+    font-weight: bold;
+}
+
+.nvStyle:active {
+    color: $white;
+    font-weight: bold;
+}

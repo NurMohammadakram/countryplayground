@@ -1,0 +1,10 @@
+
+@mixin paddingForInput {
+    font-size: 17px;
+    padding: 6px 20px;
+    border: none;
+}
+
+@mixin bgColor {
+    background-color: $primary;
+}

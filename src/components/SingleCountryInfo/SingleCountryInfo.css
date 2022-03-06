@@ -1,0 +1,40 @@
+.single-country-info-container {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid #c0c0c0;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+}
+.maps {
+    border-radius: 5px;
+}
+
+.c-n {
+    color:rgb(236, 92, 26);
+}
+.flag-big img {
+    height: 20rem;
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+@media (max-width: 576px) {
+    .flag-big img {
+        height: 8rem;
+    }
+}
+.details-info {
+    margin-top: 20px;
+}
+.back-btn {
+    
+    border: none;
+    background: rgb(236, 92, 26);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+.back-btn:hover {
+    color: white;
+}

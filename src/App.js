@@ -1,34 +1,27 @@
 import React from 'react';
-import './App.css';
-import { Routes, Route} from "react-router-dom";
-import Navbar from './components/Navbar/Navbar';
-import SingleCountryInfo from './components/SingleCountryWholeInfo/SingleCountryInfo';
+import './scss/style.scss';
+import { Routes, Route, Navigate} from "react-router-dom";
+import Navbar from './components/Navbar';
+import SingleCountryInfo from './components/SingleCountryInfo/SingleCountryInfo';
 import AllRegionInfo from './components/AllRegionInfo/AllRegionInfo';
-import NotFound from './components/NotFound/NotFound';
-import AfricaCountries from './components/AfricaRegion/AfricaCountries';
-import About from './components/About/About';
-import AsiaCountries from './components/AsiaRegion/AsiaCountries';
-import EuropeCountries from './components/EuropeRegion/EuropeCountries';
-import Contact from './components/Contact/Contact';
-import OseaniaCountries from './components/OseaniaRegion/OseaniaCountries';
-import Maps from './components/Maps/Maps';
-import AmericasCountries from './components/AmericasRegion/AmericasCountries';
+import NotFound from './components/NotFound';
+import About from './components/About';
+import RegionalCountries from './components/RegionalCountries/RegionalCountries';
+import Contact from './components/Contact';
+import Maps from './components/Maps';
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route path='/' element={ <AllRegionInfo/> } />
-        <Route path='Asia' element={<AsiaCountries />} />
-        <Route path='Europe' element={<EuropeCountries />}/>
-        <Route path='Africa' element={<AfricaCountries />} />
-        <Route path='Oceania' element={<OseaniaCountries />} />
-        <Route path='Americas' element={<AmericasCountries />} />
+        <Route path='/' element={ <Navigate to='/home'/>} />
+        <Route path='home' element={ <AllRegionInfo /> } />
+        <Route path='home/:Region' element={<RegionalCountries />} />
+        <Route path='home/:Region/country/:name/:code' element={ <SingleCountryInfo /> } />
         <Route path='map' element={ <Maps /> } />
         <Route path='about' element={ <About /> } />
         <Route path='contact' element={ <Contact />} />
-        <Route path={`/:region/country/:name/:code`} element={ <SingleCountryInfo /> } />
         <Route path='*' element={ <NotFound />} />
       </Routes>
     </div>

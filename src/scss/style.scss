@@ -1,0 +1,12 @@
+
+// bootstrap components and custom sass
+@use 'custom';
+
+// componets section 
+@use 'components/Navbar';
+@use 'components/AllRegion';
+@use 'components/RegionlCountries';
+@use 'components/NotFound';
+
+// mixins
+@use 'mixins/mixins';

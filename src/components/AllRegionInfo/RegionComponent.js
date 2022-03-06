@@ -5,21 +5,23 @@ const RegionComponent = (props) => {
     const region = props.region;
 
     return (
-        <div className="info-box">
+        <div className="info-box col-lg-4 col-sm-6">
             <h1 className='region-title'>{region}</h1>
-            <div className="box">
-                <Link className='asia link' to={region}>
-                    <h1>
-                    {
-                        (region === 'Asia') ? 'Asian'
-                        : (region === 'Europe') ? 'European'
-                        : (region === 'Africa') ? 'African'
-                        : (region === 'Oceania') ? 'Oceanian'
-                        : 'American'
-                    } countries</h1>
-                    <p>See details</p>
-                </Link>
-            </div>
+            <Link className='link' to={`/home/${region}`}>
+                <div className="card">
+                    <div className="card-body">
+                        <h1>
+                        {
+                            (region === 'Asia') ? 'Asian'
+                            : (region === 'Europe') ? 'European'
+                            : (region === 'Africa') ? 'African'
+                            : (region === 'Oceania') ? 'Oceanian'
+                            : 'American'
+                        } countries</h1>
+                        <p className='card-text'>See details</p>
+                    </div>
+                </div>
+            </Link>
         </div>
     );
 };

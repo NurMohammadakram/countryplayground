@@ -1,24 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import './AllRegionInfo.css';
+import {Container} from 'react-bootstrap';
 import RegionComponent from './RegionComponent';
+
+
+export const regions = [{id: 0, reg: 'Asia'}, {id: 1, reg: 'Europe'}, {id: 2, reg: 'Africa'}, {id: 3, reg: 'Oceania'}, {id: 4, reg: 'Americas'}];
 
 const AllRegionInfo = () => {
     const [regionList, setRegionList] = useState([]);
     
     useEffect( () => {
-        const region = [{id: 0, reg: 'Asia'}, {id: 1, reg: 'Europe'}, {id: 2, reg: 'Africa'}, {id: 3, reg: 'Oceania'}, {id: 4, reg: 'Americas'}];
-        setRegionList([...region]);
+        
+        setRegionList([...regions]);
     }, []);
 
     return (
-        <div>
-            <h1 className='title'>Here, All countries are in Region based</h1>
-            <hr className='hr' />
-            <div className="countries-container">
-                {
-                    regionList.map(region => < RegionComponent region={region.reg} key={region.id}/>)
-                }
-            </div>
+        <div className='home-content my-5'>
+            <Container>
+                <h1 className='text-center mb-0'>Here, All countries are in Region based</h1>
+                <hr className='hr mx-auto' />
+                <div className="row flex-wrap">
+                    {
+                        regionList.map(region => < RegionComponent region={region.reg} key={region.id}/>)
+                    }
+                </div>
+            </Container>
         </div>
     );
 };
